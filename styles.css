@@ -1,0 +1,104 @@
+:root {
+  --bg: #07121f;
+  --panel: #0f2238;
+  --text: #e7f2ff;
+  --accent: #43d17a;
+  --danger: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #183b5b, var(--bg) 55%);
+}
+
+.game-shell {
+  width: min(90vw, 560px);
+  padding: 1rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--panel), black 8%);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 35%);
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.hud {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: #03230f;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.canvas-wrap {
+  position: relative;
+}
+
+#game-canvas {
+  width: 100%;
+  height: auto;
+  border: 2px solid #35587a;
+  border-radius: 8px;
+  image-rendering: pixelated;
+  background-color: #0d2337;
+  background-image: url("assets/gjp-bg.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  background: rgb(0 0 0 / 60%);
+  border-radius: 8px;
+}
+
+.overlay h2,
+.overlay p {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  color: #c7d9eb;
+}
