@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake GJP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <h1>Snake GJP</h1>
+      <div class="hud">
+        <span>Score: <strong id="score">0</strong></span>
+        <button id="restart-btn" type="button">Restart</button>
+      </div>
+    </header>
+
+    <section class="canvas-wrap">
+      <canvas id="game-canvas" width="480" height="480" aria-label="Snake game area"></canvas>
+      <div id="game-over" class="overlay hidden" aria-live="polite">
+        <h2>Game Over</h2>
+        <p>Your score: <span id="final-score">0</span></p>
+        <button id="overlay-restart-btn" type="button">Play Again</button>
+      </div>
+    </section>
+
+    <p class="hint">Use Arrow keys or WASD to move.</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
